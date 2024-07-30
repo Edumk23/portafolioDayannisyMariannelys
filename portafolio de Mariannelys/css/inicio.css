@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Poppins:ital,wght@1,500&display=swap');
+
+:root {
+    --yellow: #ffabab;
+    --dark-bg: #111;
+    --light-bg: #1a1a1a;
+    --text-light: #fff;
+    --text-muted: #eee;
+    --accent: var(--yellow);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+*::selection {
+    background: var(--accent);
+    color: #333;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #222;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+body {
+    background: var(--dark-bg);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--dark-bg);
+    color: var(--text-light);
+    min-height: 100vh;
+}
+
+.titulo {
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--light-bg);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    width: 25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 0.5rem solid var(--accent);
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 2.4rem;
+    color: var(--accent);
+}
+
+.card p {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 3rem;
+    background: #333;
+    color: var(--text-light);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn i {
+    padding-left: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+}
